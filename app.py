@@ -9,7 +9,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def homepage():
-    return current_app.send_static_file('home.html')
+    return current_app.send_static_file('index.html')
 
 #rotas alternativas 
 
