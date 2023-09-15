@@ -23,15 +23,14 @@ validation = autokeras.image_dataset_from_directory(
     subset="validation",
 )
 
-# Initialize the image classifier.
-clf = autokeras.ImageClassifier(overwrite=True, max_trials=1)
-# Feed the image classifier with training data.
+# Initialize the ImageClassifier
+clf = autokeras.ImageClassifier(overwrite=True, max_trials=10)
+
+# Search for the best model architecture
 clf.fit(training, epochs=10)
 
-# Predict with the best model.
-predicted_y = clf.predict(validation)
-print(predicted_y)
+# Get the best model found during the search
+best_model = clf.export_model()
 
-
-# Evaluate the best model with testing data.
+# Evaluate the best model with validation data.
 print(clf.evaluate(validation))
