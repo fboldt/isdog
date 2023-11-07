@@ -1,0 +1,2 @@
+def assessarchiteture(architeture):
+    pass
