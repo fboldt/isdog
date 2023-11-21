@@ -1,2 +1,0 @@
-def assessarchiteture(architeture):
-    pass
