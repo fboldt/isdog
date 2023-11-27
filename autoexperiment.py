@@ -3,9 +3,7 @@ import autokeras
 training = autokeras.image_dataset_from_directory(
     "kaggle",
     batch_size=32,
-    color_mode="rgb",
-    image_size=(256, 256),
-    interpolation="bilinear",
+    image_size=(180, 180),
     shuffle=True,
     seed=42,
     validation_split=0.2,
@@ -14,9 +12,7 @@ training = autokeras.image_dataset_from_directory(
 validation = autokeras.image_dataset_from_directory(
     "kaggle",
     batch_size=32,
-    color_mode="rgb",
-    image_size=(256, 256),
-    interpolation="bilinear",
+    image_size=(180, 180),
     shuffle=True,
     seed=42,
     validation_split=0.2,
@@ -24,10 +20,10 @@ validation = autokeras.image_dataset_from_directory(
 )
 
 # Initialize the ImageClassifier
-clf = autokeras.ImageClassifier(overwrite=True, max_trials=10)
+clf = autokeras.ImageClassifier(overwrite=True, max_trials=100)
 
 # Search for the best model architecture
-clf.fit(training, epochs=10)
+clf.fit(training, epochs=50)
 
 # Get the best model found during the search
 best_model = clf.export_model()
