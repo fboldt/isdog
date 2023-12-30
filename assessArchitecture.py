@@ -7,8 +7,9 @@ data_augmentation = keras.Sequential([
     layers.RandomRotation(0.1), 
     layers.RandomZoom(0.2)])
 
+database_dir = "scraper_database"
 
-def make_subset(subset="training", directory="kaggle"):
+def make_subset(subset="training", directory=database_dir):
     return image_dataset_from_directory(directory,
                                         image_size=(180, 180),
                                         validation_split=0.25,

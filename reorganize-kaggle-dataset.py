@@ -2,12 +2,14 @@ import os, pathlib
 import shutil
 import pandas as pd
 
+nome_diretorio = 'kaggle'
+
 train_ori = pathlib.Path('dog-breed-identification/train')
 test_ori = pathlib.Path('dog-breed-identification/test')
 
-if not os.path.exists('kaggle'):
-    os.makedirs('kaggle')
-kaggle = pathlib.Path('kaggle')
+if not os.path.exists(nome_diretorio):
+    os.makedirs(nome_diretorio)
+diretorio_destino = pathlib.Path(nome_diretorio)
 
 def move_images(image, label, dest_dir, source_dir):
     _ = os.path.join(dest_dir, label)
@@ -20,4 +22,4 @@ def move_images(image, label, dest_dir, source_dir):
 
 labels = pd.read_csv('./dog-breed-identification/labels.csv').to_numpy()
 for image, label in labels:
-    move_images(image, label, kaggle, train_ori)
+    move_images(image, label, diretorio_destino, train_ori)
