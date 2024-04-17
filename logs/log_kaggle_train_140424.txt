@@ -1,0 +1,59 @@
+dogscraper@fbro0:~/isdog$ python assessAll.py
+2024-04-14 15:35:27.295081: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2024-04-14 15:35:27.815778: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+2024-04-14 15:35:28.309770: I external/local_xla/xla/stream_executor/cuda/cuda_executor.cc:998] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2024-04-14 15:35:28.334656: I external/local_xla/xla/stream_executor/cuda/cuda_executor.cc:998] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2024-04-14 15:35:28.334865: I external/local_xla/xla/stream_executor/cuda/cuda_executor.cc:998] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2024-04-14 15:35:28.337394: I external/local_xla/xla/stream_executor/cuda/cuda_executor.cc:998] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2024-04-14 15:35:28.337546: I external/local_xla/xla/stream_executor/cuda/cuda_executor.cc:998] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2024-04-14 15:35:28.337679: I external/local_xla/xla/stream_executor/cuda/cuda_executor.cc:998] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2024-04-14 15:35:28.418588: I external/local_xla/xla/stream_executor/cuda/cuda_executor.cc:998] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2024-04-14 15:35:28.418762: I external/local_xla/xla/stream_executor/cuda/cuda_executor.cc:998] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2024-04-14 15:35:28.418901: I external/local_xla/xla/stream_executor/cuda/cuda_executor.cc:998] successful NUMA node read from SysFS had negative value (-1), but there must be at least one NUMA node, so returning NUMA node zero. See more at https://github.com/torvalds/linux/blob/v6.0/Documentation/ABI/testing/sysfs-bus-pci#L344-L355
+2024-04-14 15:35:28.419020: I tensorflow/core/common_runtime/gpu/gpu_device.cc:1928] Created device /job:localhost/replica:0/task:0/device:GPU:0 with 6573 MB memory:  -> device: 0, name: NVIDIA GeForce RTX 2080 SUPER, pci bus id: 0000:21:00.0, compute capability: 7.5
+Found 9742 files belonging to 120 classes.
+Using 7307 files for training.
+Found 9742 files belonging to 120 classes.
+Using 2435 files for validation.
+Epoch 1/50
+2024-04-14 15:35:33.637039: I external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:465] Loaded cuDNN version 8907
+2024-04-14 15:35:34.459271: W external/local_tsl/tsl/framework/bfc_allocator.cc:296] Allocator (GPU_0_bfc) ran out of memory trying to allocate 6.88GiB with freed_by_count=0. The caller indicates that this is not a failure, but this may mean that there could be performance gains if more memory were available.
+227/229 ━━━━━━━━━━━━━━━━━━━━ 0s 51ms/step - accuracy: 0.2719 - loss: 5.86982024-04-14 15:35:46.851120: W external/local_tsl/tsl/framework/bfc_allocator.cc:296] Allocator (GPU_0_bfc) ran out of memory trying to allocate 6.81GiB with freed_by_count=0. The caller indicates that this is not a failure, but this may mean that there could be performance gains if more memory were available.
+229/229 ━━━━━━━━━━━━━━━━━━━━ 21s 74ms/step - accuracy: 0.2736 - loss: 5.8503 - val_accuracy: 0.6813 - val_loss: 1.5274 - learning_rate: 0.0010
+Epoch 2/50
+229/229 ━━━━━━━━━━━━━━━━━━━━ 16s 70ms/step - accuracy: 0.5575 - loss: 3.0362 - val_accuracy: 0.7097 - val_loss: 1.6805 - learning_rate: 0.0010
+Epoch 3/50
+229/229 ━━━━━━━━━━━━━━━━━━━━ 16s 70ms/step - accuracy: 0.5970 - loss: 2.6950 - val_accuracy: 0.7154 - val_loss: 1.7280 - learning_rate: 0.0010
+Epoch 4/50
+229/229 ━━━━━━━━━━━━━━━━━━━━ 16s 68ms/step - accuracy: 0.6223 - loss: 2.4282 - val_accuracy: 0.7101 - val_loss: 1.7838 - learning_rate: 0.0010
+Epoch 5/50
+229/229 ━━━━━━━━━━━━━━━━━━━━ 16s 70ms/step - accuracy: 0.6416 - loss: 2.3381 - val_accuracy: 0.7166 - val_loss: 1.7978 - learning_rate: 0.0010
+Epoch 6/50
+229/229 ━━━━━━━━━━━━━━━━━━━━ 16s 70ms/step - accuracy: 0.6548 - loss: 2.2175 - val_accuracy: 0.7232 - val_loss: 1.8164 - learning_rate: 0.0010
+Epoch 7/50
+229/229 ━━━━━━━━━━━━━━━━━━━━ 16s 68ms/step - accuracy: 0.6580 - loss: 2.1809 - val_accuracy: 0.7216 - val_loss: 1.8431 - learning_rate: 0.0010
+Epoch 8/50
+229/229 ━━━━━━━━━━━━━━━━━━━━ 16s 68ms/step - accuracy: 0.6631 - loss: 2.1157 - val_accuracy: 0.7191 - val_loss: 1.8460 - learning_rate: 0.0010
+Epoch 9/50
+229/229 ━━━━━━━━━━━━━━━━━━━━ 16s 70ms/step - accuracy: 0.6862 - loss: 1.8742 - val_accuracy: 0.7277 - val_loss: 1.7358 - learning_rate: 5.0000e-05
+Epoch 10/50
+229/229 ━━━━━━━━━━━━━━━━━━━━ 16s 70ms/step - accuracy: 0.6961 - loss: 1.8076 - val_accuracy: 0.7331 - val_loss: 1.7045 - learning_rate: 5.0000e-05
+Epoch 11/50
+229/229 ━━━━━━━━━━━━━━━━━━━━ 16s 69ms/step - accuracy: 0.7068 - loss: 1.6858 - val_accuracy: 0.7322 - val_loss: 1.6939 - learning_rate: 5.0000e-05
+Epoch 12/50
+229/229 ━━━━━━━━━━━━━━━━━━━━ 16s 70ms/step - accuracy: 0.7013 - loss: 1.7166 - val_accuracy: 0.7351 - val_loss: 1.6793 - learning_rate: 5.0000e-05
+Epoch 13/50
+229/229 ━━━━━━━━━━━━━━━━━━━━ 16s 70ms/step - accuracy: 0.7031 - loss: 1.7163 - val_accuracy: 0.7388 - val_loss: 1.6719 - learning_rate: 5.0000e-05
+Epoch 14/50
+229/229 ━━━━━━━━━━━━━━━━━━━━ 16s 68ms/step - accuracy: 0.7007 - loss: 1.6975 - val_accuracy: 0.7339 - val_loss: 1.6647 - learning_rate: 5.0000e-05
+Epoch 15/50
+229/229 ━━━━━━━━━━━━━━━━━━━━ 16s 69ms/step - accuracy: 0.7106 - loss: 1.6627 - val_accuracy: 0.7331 - val_loss: 1.6742 - learning_rate: 5.0000e-05
+Epoch 16/50
+229/229 ━━━━━━━━━━━━━━━━━━━━ 16s 69ms/step - accuracy: 0.6968 - loss: 1.6739 - val_accuracy: 0.7322 - val_loss: 1.6708 - learning_rate: 2.5000e-06
+Epoch 17/50
+229/229 ━━━━━━━━━━━━━━━━━━━━ 16s 69ms/step - accuracy: 0.6996 - loss: 1.6835 - val_accuracy: 0.7331 - val_loss: 1.6713 - learning_rate: 2.5000e-06
+Epoch 18/50
+229/229 ━━━━━━━━━━━━━━━━━━━━ 16s 69ms/step - accuracy: 0.7018 - loss: 1.6766 - val_accuracy: 0.7339 - val_loss: 1.6709 - learning_rate: 1.2500e-07
+77/77 ━━━━━━━━━━━━━━━━━━━━ 5s 49ms/step - accuracy: 0.7179 - loss: 1.8482
+[1.6719459295272827, 0.7388090491294861]
