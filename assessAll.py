@@ -1,6 +1,8 @@
+
 from assessArchitecture import assessArchitecture
 from tensorflow import keras
 import numpy as np
+
 # from efficientnet.tfkeras import EfficientNetB0, EfficientNetB1, EfficientNetB2, EfficientNetB3, EfficientNetB4, EfficientNetB5, EfficientNetB6, EfficientNetB7
 # from convnets.models import ConvNeXtTiny, ConvNeXtSmall, ConvNeXtBase, ConvNeXtLarge, ConvNeXtXLarge
 
@@ -9,7 +11,7 @@ import numpy as np
 # As outras arquiteturas estão comentadas, pois, estou utilizando apenas a Xception para rodar os experimentos para o TCC da Amanda.
 
 architectures = [
-    ("Xception", keras.applications.xception.Xception, keras.applications.xception.preprocess_input),
+    ("Xception", keras.applications.xception.Xception, keras.applications.xception.preprocess_input)
     # ("VGG16", keras.applications.vgg16.VGG16, keras.applications.vgg16.preprocess_input),
     # ("VGG19", keras.applications.vgg19.VGG19, keras.applications.vgg19.preprocess_input),
     # ("ResNet50", keras.applications.resnet50.ResNet50, keras.applications.resnet50.preprocess_input),
@@ -35,7 +37,6 @@ architectures = [
     # ("EfficientNetB5", EfficientNetB5, keras.applications.efficientnet.preprocess_input),
     # ("EfficientNetB6", EfficientNetB6, keras.applications.efficientnet.preprocess_input),
     # ("EfficientNetB7", EfficientNetB7, keras.applications.efficientnet.preprocess_input),
-    # Adicione as arquiteturas EfficientNetV2 e ConvNeXt conforme necessário
     # ("EfficientNetV2B0", keras.applications.efficientnet.EfficientNetB0, keras.applications.efficientnet.preprocess_input),
     # ("EfficientNetV2B1", keras.applications.efficientnet.EfficientNetB1, keras.applications.efficientnet.preprocess_input),
     # ("EfficientNetV2B2", keras.applications.efficientnet.EfficientNetB2, keras.applications.efficientnet.preprocess_input),
@@ -51,6 +52,6 @@ architectures = [
 ]
 
 for checkpoint, architecture, preprocess_input in architectures:
-    scores, history = assessArchitecture(architecture, preprocess_input, checkpoint+".best")
+    scores, history = assessArchitecture(architecture, preprocess_input, checkpoint+"kaggleAPI_model_1604.best")
     np.savetxt("scores/"+checkpoint+".csv", scores)
     print(scores)
