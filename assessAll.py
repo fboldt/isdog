@@ -52,6 +52,6 @@ architectures = [
 ]
 
 for checkpoint, architecture, preprocess_input in architectures:
-    scores, history = assessArchitecture(architecture, preprocess_input, checkpoint+"kaggleAPI_model_1604.best")
+    scores, history = assessArchitecture(architecture, preprocess_input, checkpoint+"kaggleScraper_manual.best")
     np.savetxt("scores/"+checkpoint+".csv", scores)
     print(scores)

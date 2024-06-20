@@ -13,7 +13,7 @@ def make_subset(subset="testing", directory="kaggle_teste"):
     return image_dataset_from_directory(directory,
                                         image_size=(180, 180),
                                         seed=42,
-                                        batch_size=8)
+                                        batch_size=1)
 
 def predict_with_model(model_path, test_dataset):
     metrics = {'Accuracy':[], 'Recall':[], 'Precision':[], 'F1':[]}
@@ -77,9 +77,9 @@ def calc_metrics(test_dataset, predictions):
 
 
 # Exemplo de uso
-model_path = "models/kaggleAPI_model_1804.keras"
+model_path = "XceptionkaggleScraper_manual.best.keras"
 # model_name = "kaggle"
-test_directory = "test_dataset"
+test_directory = "../../dogscraper/isdog/test_dataset"
 metrics = {'Accuracy':0, 'Recall':0, 'Precision':0, 'F1':0}
 
 test_dataset = make_subset(subset="testing", directory=test_directory)
@@ -101,7 +101,7 @@ metrics = predict_with_model(model_path, test_dataset)
 
 print('saving final file!')
 
-with open("metrics_scores/kaggleAPInew_test.json", 'w') as json_file:
+with open("metrics_scores/kaggleScraper_manual.json", 'w') as json_file:
     json.dump(metrics, json_file)
 print("file saved with success!")
 

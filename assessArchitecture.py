@@ -10,7 +10,7 @@ data_augmentation = keras.Sequential([
     layers.RandomRotation(0.1), 
     layers.RandomZoom(0.2)])
 
-database_dir = "Kaggle+API/teste" # KaggleScraper/Kaggle+Scraper Kaggle+API/teste kaggle_treino_dataset
+database_dir = "../KaggleScraperManual" # KaggleScraper/Kaggle+Scraper Kaggle+API/teste kaggle_treino_dataset
 
 def make_subset(subset="training", directory=database_dir):
     return image_dataset_from_directory(directory,
@@ -18,7 +18,7 @@ def make_subset(subset="training", directory=database_dir):
                                         validation_split=0.25,
                                         subset=subset,
                                         seed=42,
-                                        batch_size=32)
+                                        batch_size=8)
     
 train_dataset = make_subset("training")
 validation_dataset = make_subset("validation")
